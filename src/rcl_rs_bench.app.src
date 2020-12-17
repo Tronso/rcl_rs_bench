@@ -1,0 +1,17 @@
+{application, rcl_rs_bench,
+ [{description, "Riak Core Lite Random Slicing Benchmarking Framework"},
+  {vsn, "0.1.0"},
+  {registered, []},
+  {mod, {rcl_rs_bench_app, []}},
+  {applications,
+   [kernel,
+    stdlib,
+    riak_core,
+    rcl_bench
+   ]},
+  {env,[]},
+  {modules, []},
+
+  {licenses, ["Apache 2.0"]},
+  {links, []}
+ ]}.
