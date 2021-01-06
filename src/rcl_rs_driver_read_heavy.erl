@@ -80,15 +80,16 @@ mode() -> {ok, {rate, max}}.
 %% Number of concurrent workers
 concurrent_workers() -> {ok, 3}.
 %% Test duration (minutes)
-duration() -> {ok, 5}.
+duration() -> {ok, 1}.
 %% Operations (and associated mix)
 operations() ->
-    {ok, [{get_own_puts, 3}, 
-                  {put, 10}, 
-                  {get, 2}, 
-                  {http_get_own_puts, 3},
-                  {http_put, 10},
-                  {http_get, 2}]}.
+    {ok, [{get_own_puts, 475}, 
+                  {put, 475}, 
+                  {get, 50}%, 
+                  %{http_get_own_puts, 3},
+                  %{http_put, 10},
+                  %{http_get, 2}
+    ]}.
 
 %% Base test output directory
 test_dir() -> {ok, "tests"}.
