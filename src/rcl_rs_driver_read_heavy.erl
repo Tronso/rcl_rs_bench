@@ -1,4 +1,4 @@
--module(rcl_rs_driver).
+-module(rcl_rs_driver_read_heavy).
 -behaviour(rcl_bench_driver).
 
 -export([new/1, run/4, terminate/2]).

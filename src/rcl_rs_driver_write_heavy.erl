@@ -1,4 +1,4 @@
--module(rcl_rs_driver).
+-module(rcl_rs_driver_write_heavy).
 -behaviour(rcl_bench_driver).
 
 -export([new/1, run/4, terminate/2]).
@@ -80,7 +80,7 @@ mode() -> {ok, {rate, max}}.
 %% Number of concurrent workers
 concurrent_workers() -> {ok, 3}.
 %% Test duration (minutes)
-duration() -> {ok, 1}.
+duration() -> {ok, 5}.
 %% Operations (and associated mix)
 operations() ->
     {ok, [{get_own_puts, 25}, 
