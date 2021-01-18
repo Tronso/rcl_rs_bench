@@ -30,5 +30,5 @@ run: rel
 visualize:
 	mkdir -p $(BASEDIR)/results
 	cat $(TESTDIR)/get_single.csv $(TESTDIR)/get-own-puts_single.csv $(TESTDIR)/http-get_single.csv $(TESTDIR)/http-get-own-puts_single.csv $(TESTDIR)/http-put_single.csv $(TESTDIR)/put_single.csv | sed '2, $$s/timestamp, unit, microseconds//g' > $(OUTDIR)/all_single.csv
-	Rscript $(RDIR)/latency.R all "$(OUTDIR)/all_single.csv" $(OUTDIR)/latency.png
-	Rscript $(RDIR)/throughput.R all "$(OUTDIR)/all_single.csv" $(OUTDIR)/throughput.png
+	Rscript $(RDIR)/latency.R all "$(OUTDIR)/all_single.csv" $(OUTDIR)/latency.pdf
+	Rscript $(RDIR)/throughput.R all "$(OUTDIR)/all_single.csv" $(OUTDIR)/throughput.pdf
